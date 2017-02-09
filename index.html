@@ -9,6 +9,9 @@ body {
   margin-right: auto;
   background-image: url("images/background.jpg");
 }
+#myframe {
+  display: none;
+}
 
 div.scrollmenu {
     background-color: #333;
@@ -69,12 +72,26 @@ padding-top: 10px;
   font-style: italic;
 }
 
+#cat_name {
+  font-style: italic;
+  margin: 3px;
+}
 
+#cat_rank {
+  font-size: 12px;
+  /*color: silver;*/
+  color: white;
+  font-weight: bold;
+  margin: 5px;
+}
 </style>
 </head>
 <body>
+  <iframe id='myframe' src = 'names.txt' onload='readCatsNames()'> </iframe>
   <div class="big_pic">
-     <img src="images/cat.jpg" onclick="ClickCounterFunction()"class="big_cat">
+    <p id='cat_name'></p>
+    <p id='cat_rank'>newborn</p>
+     <img src="images/cat0.jpg" onclick="ClickCounterFunction()"class="big_cat">
        <div class="counter_class" style="display: table;">
      <img src="images/heart.png" onclick="ClickCounterFunction()" id="heart">
      <div id="counter" style="display: table-cell; vertical-align: middle;">0</div>
@@ -85,7 +102,6 @@ padding-top: 10px;
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
 <script src="js/imageLoader.js"></script>
-<script src="js/cat_reader.js"></script>
 
 </body>
 

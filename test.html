@@ -1,0 +1,27 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <style>
+  /*#iframe {
+    display: none;
+  }*/
+  </style>
+
+</head>
+<body>
+<iframe id='myframe' src = 'names.txt' onload='readfile()'> </iframe>
+<h1>Hello World!</h1>
+<script>
+function readfile() {
+
+  // var iframeText=document.getElementById('myframe').innerHTML;
+  // var iframeText=window.frames[0].document.body.innerHTML;
+  // var iframeText=window.frames['iframe01'].document.body.innerHTML;
+  // $('#myframe').contents().find('html').html();
+  // alert(iframeText);
+alert(document.getElementById('myframe').contentDocument.body.firstChild.innerHTML);
+
+}
+</script>
+</body>
+</html>
